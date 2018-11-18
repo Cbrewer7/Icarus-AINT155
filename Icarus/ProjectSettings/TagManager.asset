@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Collisions
   - 
   - 
   - 
@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: Floor
     uniqueID: 1299723439
+    locked: 0
+  - name: Items
+    uniqueID: 4133311189
+    locked: 0
+  - name: Player/MOBs
+    uniqueID: 1770068949
     locked: 0
