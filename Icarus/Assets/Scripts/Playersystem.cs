@@ -12,8 +12,6 @@ public class Playersystem : MonoBehaviour {
     public float Speed = 3;
     private Vector2 moveVelocity;
     private Rigidbody2D rb;
-    // The players Health 
-    public int health = 10;
     //public Image healthBar;
     //public Text HealthDisplay;
 
@@ -32,12 +30,15 @@ public class Playersystem : MonoBehaviour {
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         moveVelocity = moveInput.normalized * Speed;
 
+        // Change the below to When the player Dies Display the stats
 
-        // If the Player Health reaches 0 or less then the level restarts (THIS IS TEMPORARY)
-        if(health <= 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        // If the Player Health reaches 0 or less then the level restarts (THIS IS TEMPORARY) 
+        //if(health <= 0)
+        //{
+           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       // }
+
+        
 
         
 
