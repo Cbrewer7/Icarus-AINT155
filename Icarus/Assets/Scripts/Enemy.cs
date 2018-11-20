@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
     public float speed;
     private Transform playerPos;
-    private Playersystem player;
+    private HealthSystem player;
+    public Image healthBar;
 
     void Start()
     {
         // Obtaining the Playersystem script variables/components
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Playersystem>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
         // Obtaining the Player position
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
@@ -30,11 +32,16 @@ public class Enemy : MonoBehaviour {
         {
             player.health--;
             // Destroying the Enemy object
+            
             Destroy(gameObject);
         }
 
+        // Destroying the Enemy with the Fireable object
         if (other.CompareTag("Fireable"))
         {
+            // Destroy Projectile
+            Destroy(other.gameObject);
+            // Destroy Enemy
             Destroy(gameObject);
         }
     }

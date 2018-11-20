@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Playersystem : MonoBehaviour {
 
@@ -12,8 +14,10 @@ public class Playersystem : MonoBehaviour {
     private Rigidbody2D rb;
     // The players Health 
     public int health = 10;
+    //public Image healthBar;
+    //public Text HealthDisplay;
 
-    
+
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -23,9 +27,19 @@ public class Playersystem : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
+
         // Player movement
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         moveVelocity = moveInput.normalized * Speed;
+
+
+        // If the Player Health reaches 0 or less then the level restarts (THIS IS TEMPORARY)
+        if(health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        
 
         // Used to assign animation
         float inputX = Input.GetAxis("Horizontal");
@@ -33,7 +47,9 @@ public class Playersystem : MonoBehaviour {
 
         anim.SetFloat("SpeedX", inputX);
         anim.SetFloat("SpeedY", inputY);
-	}
+
+
+    }
 
     private void FixedUpdate()
     {
