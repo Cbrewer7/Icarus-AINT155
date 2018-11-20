@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    // Will load the first level of the game
     public void StartButton()
     {
         SceneManager.LoadScene("Level01");
     }
+    // Will close the game
     public void EndGame()
     {
-        SceneManager.LoadScene("Game Over");
+        // the debug tool to check if it has worked
+        Debug.Log("The application has been quit");
+        Application.Quit();
     }
-    public void BackToMainMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
-    }
+    
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class Playersystem : MonoBehaviour {
 
     // used to apply multiple animations
     public Animator anim;
@@ -10,12 +10,14 @@ public class PlayerMovement : MonoBehaviour {
     public float Speed = 3;
     private Vector2 moveVelocity;
     private Rigidbody2D rb;
+    // The players Health 
+    public int health = 10;
 
-	// Use this for initialization
-	void Start () {
+    
+    // Use this for initialization
+    void Start () {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         moveVelocity = moveInput.normalized * Speed;
 
+        // Used to assign animation
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
 
@@ -35,6 +38,8 @@ public class PlayerMovement : MonoBehaviour {
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+
+        // Used to assign the axis for the animation
         float lastInputX = Input.GetAxis("Horizontal");
         float lastInputY = Input.GetAxis("Vertical");
 
