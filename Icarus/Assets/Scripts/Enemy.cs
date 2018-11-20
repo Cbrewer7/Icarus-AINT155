@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
+    public float damage = 1;
     public float speed;
     private Transform playerPos;
     private HealthSystem player;
@@ -30,7 +31,7 @@ public class Enemy : MonoBehaviour {
         //Where the player loses health
         if (other.CompareTag("Player"))
         {
-            player.health--;
+            player.TakeDamage(damage);
             // Destroying the Enemy object
             
             Destroy(gameObject);

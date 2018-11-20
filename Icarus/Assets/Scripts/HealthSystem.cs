@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
+public class OnDamagedEvent : UnityEvent<int> { }
 
 public class HealthSystem : MonoBehaviour {
 
@@ -9,6 +12,10 @@ public class HealthSystem : MonoBehaviour {
 
     public Image HealthBar;
     public Text HealthDisplay;
+
+    public Slider healthSlider;
+
+    //public OnDamagedEvent onDamaged;
 
     private void Update()
     {
@@ -24,7 +31,9 @@ public class HealthSystem : MonoBehaviour {
     {
         health -= amount;
 
-        HealthBar.fillAmount = health / 100f;
+        HealthBar.fillAmount = health / 10f;
+
+        healthSlider.value = health;
 
         if (health <= 0)
         {
