@@ -33,7 +33,7 @@ public class HealthSystem : MonoBehaviour {
 
         HealthBar.fillAmount = health / 10f;
 
-        healthSlider.value = health;
+        //healthSlider.value = health;
 
         if (health <= 0)
         {
