@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class OnDamagedEvent : UnityEvent<int> { }
 
@@ -23,7 +24,7 @@ public class HealthSystem : MonoBehaviour {
         //HealthBar.fillAmount = health / 100f;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("OnDeath"); Destroy(gameObject);
         }
     }
 
@@ -37,7 +38,8 @@ public class HealthSystem : MonoBehaviour {
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            
+            SceneManager.LoadScene("OnDeath"); 
         }
     }
 }

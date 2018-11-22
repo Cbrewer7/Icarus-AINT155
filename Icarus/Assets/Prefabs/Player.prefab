@@ -20,11 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4712983406064508}
   - component: {fileID: 212069629493404830}
+  - component: {fileID: 114626126047207138}
   - component: {fileID: 95005549379465146}
   - component: {fileID: 61317840657986742}
   - component: {fileID: 50704017599003264}
   - component: {fileID: 114025160567061536}
-  - component: {fileID: 114108104626856534}
+  - component: {fileID: 114478148529741164}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -64,7 +65,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61317840657986742
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   Speed: 1
---- !u!114 &114108104626856534
+--- !u!114 &114478148529741164
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -129,11 +130,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1294842624139368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9df4a27f6beb442a1ceceab1e6374b, type: 3}
+  m_Script: {fileID: 11500000, guid: a4888b61962af3d42a215ad7cc52be76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shot: {fileID: 1636666525566504, guid: a0e16f643cab7cb45b72af7f0672e878, type: 2}
+--- !u!114 &114626126047207138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294842624139368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985148cd242f25842911ae3a49d719a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  healthbar: {fileID: 0}
+  HealthBar: {fileID: 0}
+  HealthDisplay: {fileID: 0}
+  healthSlider: {fileID: 0}
 --- !u!212 &212069629493404830
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -17,5 +17,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("The application has been quit");
         Application.Quit();
     }
+    // Back to main menu
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     
 }

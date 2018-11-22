@@ -38,7 +38,6 @@ public class Playersystem : MonoBehaviour {
            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
        // }
 
-        
 
         
 
