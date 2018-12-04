@@ -38,7 +38,7 @@ public class HealthSystem : MonoBehaviour {
 
         if (health <= 0)
         {
-            
+           // Load Death Screen when health reaches 0 
             SceneManager.LoadScene("OnDeath"); 
         }
     }
