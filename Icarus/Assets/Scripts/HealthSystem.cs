@@ -42,4 +42,16 @@ public class HealthSystem : MonoBehaviour {
             SceneManager.LoadScene("OnDeath"); 
         }
     }
+
+    public void RecieveHealth(float amount){
+
+        health += amount;
+
+        HealthBar.fillAmount = health / 10f;
+
+        if (health >= 10)
+        {
+            health = 10;
+        }
+    }
 }
