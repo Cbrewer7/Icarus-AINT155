@@ -9,7 +9,7 @@ public class PlayerShooting : MonoBehaviour {
 
     private void Start()
     {
-        PlayerPos = GetComponent<Transform>();
+        PlayerPos = transform;
     }
 
     void Update()

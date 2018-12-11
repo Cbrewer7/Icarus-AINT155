@@ -4,22 +4,41 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
-    private Vector2 Target;
-    public float speed;
+
+    
+    public float speed = 100f;
 
     private void Start()
     {
-        Target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // Depending on the distance of the mouse from the player, the projectile speed changes.
+        // This allows the projectile to fire in the direction of the mouse click at a speed related
+        // to the distance of the mouse click from the player. 
+        // Fires the projectile allowing player to have animation and not be facing a specific way.
+        // https://answers.unity.com/questions/604198/shooting-in-direction-of-mouse-cursor-2d.html
+
+        Vector3 shootDirection;
+        shootDirection = Input.mousePosition;
+        shootDirection.z = 0.0f;
+        shootDirection = Camera.main.ScreenToWorldPoint(shootDirection);
+        shootDirection = shootDirection - transform.position;
+
+        GetComponent<Rigidbody2D>().AddForce(shootDirection * speed, ForceMode2D.Impulse);
+
+        
     }
 
-    private void Update()
+    // Destroys the projectile after it's gone off the screen
+    // FIX
+    private void OnBecameInvisible()
     {
-        transform.position = Vector2.MoveTowards(transform.position, Target, speed * Time.deltaTime);
-
-        if(Vector2.Distance(transform.position, Target) < 0.2f)
-        {
-            Destroy(gameObject);
-        }
+       Die();
     }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+
 
 }

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212940070012813546}
   - component: {fileID: 114455685118191936}
   - component: {fileID: 58507197778920394}
-  - component: {fileID: 50172011664205772}
+  - component: {fileID: 50291775139842690}
   m_Layer: 8
   m_Name: Fireable
   m_TagString: Fireable
@@ -43,7 +43,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50172011664205772
+--- !u!50 &50291775139842690
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -72,7 +72,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
