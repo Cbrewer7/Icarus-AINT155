@@ -72,14 +72,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099920219496174}
-  m_LocalRotation: {x: -0.98143846, y: -0, z: -0, w: 0.19177747}
+  m_LocalRotation: {x: -0.9513259, y: 0, z: 0, w: 0.30818686}
   m_LocalPosition: {x: 0, y: -0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4426445346511846}
   m_Father: {fileID: 4347150833303094}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -157.887, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -144.1, y: 0, z: 0}
 --- !u!4 &4347150833303094
 Transform:
   m_ObjectHideFlags: 1
@@ -229,7 +229,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099920219496174}
   serializedVersion: 5
-  lengthInSec: 1.62
+  lengthInSec: 0.73
   simulationSpeed: 0.72
   stopAction: 0
   looping: 0
@@ -846,7 +846,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 4.36
+    angle: 15.8663025
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -874,7 +874,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.79008394
       mode: 0
       spread: 0
       speed:
@@ -1167,18 +1167,18 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.14864936
-          inSlope: -0.14864936
-          outSlope: -0.14864936
+          value: 1
+          inSlope: -2.2366471
+          outSlope: -2.2366471
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
+          time: 0.44709778
           value: 0
-          inSlope: -0.14864936
-          outSlope: -0.14864936
+          inSlope: -2.2366471
+          outSlope: -2.2366471
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334

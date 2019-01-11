@@ -173,7 +173,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2.321925
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -665,7 +665,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 4.36
+    angle: 17.879553
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -986,18 +986,18 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.14864936
-          inSlope: -0.14864936
-          outSlope: -0.14864936
+          value: 0.22222137
+          inSlope: -0.475248
+          outSlope: -0.475248
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
+          time: 0.46759033
           value: 0
-          inSlope: -0.14864936
-          outSlope: -0.14864936
+          inSlope: -0.475248
+          outSlope: -0.475248
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
