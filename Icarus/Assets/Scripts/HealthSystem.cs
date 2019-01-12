@@ -9,7 +9,7 @@ public class OnDamagedEvent : UnityEvent<int> { }
 
 public class HealthSystem : MonoBehaviour {
 
-    public float health = 10f;
+    public static float health = 10f;
 
     public Image HealthBar;
     public Text HealthDisplay;

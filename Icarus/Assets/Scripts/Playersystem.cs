@@ -15,11 +15,27 @@ public class Playersystem : MonoBehaviour {
     //public Image healthBar;
     //public Text HealthDisplay;
 
-
+    private static bool playerExists;
+    
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        //If player exists is not true
+        if (!playerExists)
+        {
+            playerExists = true;
+            // The Player will remain the same when changing scenes
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            // Destroys the copy of the player object that appears when a new scene is loaded
+            Destroy(gameObject);
+        }
+
+        
     }
 
     // Update is called once per frame
@@ -35,10 +51,10 @@ public class Playersystem : MonoBehaviour {
         // If the Player Health reaches 0 or less then the level restarts (THIS IS TEMPORARY) 
         //if(health <= 0)
         //{
-           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-       // }
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // }
 
-
+        
         
 
         // Used to assign animation

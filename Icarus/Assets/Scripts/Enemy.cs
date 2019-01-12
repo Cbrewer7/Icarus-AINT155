@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour {
     public float speed;
     private Transform playerPos;
     private HealthSystem player;
+
     public Image healthBar;
 
     void Start()
@@ -23,6 +24,7 @@ public class Enemy : MonoBehaviour {
     {
         // The Enemy automatically moving towards the Player
         transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+        
         
     }
 
@@ -44,6 +46,8 @@ public class Enemy : MonoBehaviour {
             Destroy(other.gameObject);
             // Destroy Enemy
             Destroy(gameObject);
+
+            
         }
     }
 

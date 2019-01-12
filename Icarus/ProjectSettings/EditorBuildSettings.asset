@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/OnDeath.unity
     guid: 89930725740f4e444b218e08d63b6ead
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 7d6c3f2efdd31364ca3358a872f5b5f6
+  - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
