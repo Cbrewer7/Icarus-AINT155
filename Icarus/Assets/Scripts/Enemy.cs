@@ -51,6 +51,7 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+
     private void OnDisable()
     {
         GetComponent<Spawner>().Spawn();

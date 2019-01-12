@@ -20,12 +20,9 @@ public class HealthSystem : MonoBehaviour {
 
     private void Update()
     {
+        // Update the text box to display the current health
         HealthDisplay.text = "Health: " + health;
-        //HealthBar.fillAmount = health / 100f;
-        if (health <= 0)
-        {
-            SceneManager.LoadScene("OnDeath"); Destroy(gameObject);
-        }
+        HealthBar.fillAmount = health / 10f;
     }
 
     public void TakeDamage(float amount)
@@ -38,8 +35,10 @@ public class HealthSystem : MonoBehaviour {
 
         if (health <= 0)
         {
-           // Load Death Screen when health reaches 0 
-            SceneManager.LoadScene("OnDeath"); 
+            // Load Death Screen when health reaches 0 
+            SceneManager.LoadScene("OnDeath");
+            //
+            health = health + 10;
         }
     }
 
