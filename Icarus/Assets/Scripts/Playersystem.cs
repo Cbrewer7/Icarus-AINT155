@@ -14,7 +14,7 @@ public class Playersystem : MonoBehaviour {
     private Rigidbody2D rb;
     //public Image healthBar;
     //public Text HealthDisplay;
-    private int pickupCount;
+    //private int pickupCount;
 
     private static bool playerExists;
 
@@ -22,23 +22,23 @@ public class Playersystem : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-    rb = GetComponent<Rigidbody2D>();
-    anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
-    //If player exists is not true
-    if (!playerExists)
-    {
-        playerExists = true;
-        // The Player will remain the same when changing scenes
-        DontDestroyOnLoad(transform.gameObject);
-    }
-    else
-    {
-        // Destroys the copy of the player object that appears when a new scene is loaded
-        Destroy(gameObject);
-    }
+        //If player exists is not true
+        if (!playerExists)
+        {
+            playerExists = true;
+            // The Player will remain the same when changing scenes
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            // Destroys the copy of the player object that appears when a new scene is loaded
+            Destroy(gameObject);
+        }
 
-        pickupCount = 0;
+        //pickupCount = 0;
     }
 
     // Update is called once per frame
@@ -105,19 +105,20 @@ public class Playersystem : MonoBehaviour {
                 anim.SetFloat("LastMoveY", 0f);
             }
         }
+
         else
         {
             anim.SetBool("Moving", false);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Pickup"))
-        {
-            other.gameObject.SetActive(false);
-            pickupCount = pickupCount + 1;
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.gameObject.CompareTag("Pickup"))
+    //    {
+    //        other.gameObject.SetActive(false);
+    //        pickupCount = pickupCount + 1;
             
-        }
-    }
+    //    }
+    //}
 }

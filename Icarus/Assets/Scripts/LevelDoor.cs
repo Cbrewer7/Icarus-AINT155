@@ -17,7 +17,9 @@ public class LevelDoor : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            
             SceneManager.LoadScene(newLevel);
         }
     }
+    
 }

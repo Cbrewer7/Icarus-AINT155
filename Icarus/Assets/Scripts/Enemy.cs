@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour {
     private Transform playerPos;
     private HealthSystem player;
 
+    //private int enemyDef;
+
     public Image healthBar;
 
     void Start()
@@ -18,6 +20,8 @@ public class Enemy : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
         // Obtaining the Player position
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
+        //enemyDef = 0;
     }
 
     void Update()
@@ -34,8 +38,9 @@ public class Enemy : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             player.TakeDamage(damage);
+
             // Destroying the Enemy object
-            
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
 
@@ -45,9 +50,12 @@ public class Enemy : MonoBehaviour {
             // Destroy Projectile
             Destroy(other.gameObject);
             // Destroy Enemy
+            gameObject.SetActive(false);
             Destroy(gameObject);
 
-            
+            //enemyDef = enemyDef + 1;
+
+            FindObjectOfType<AddScore>().AddToEnemiesDef();
         }
     }
 

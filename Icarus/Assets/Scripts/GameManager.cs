@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        FindObjectOfType<AddScore>().DestroySelf();
     }
     public void Tutorial()
     {
