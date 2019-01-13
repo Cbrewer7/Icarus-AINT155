@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AddScore : MonoBehaviour {
 
     [SerializeField] int pointsperenemiesDef = 10;
     [SerializeField] int pointpercollectable = 5;
+
+    [SerializeField] int enemiesDefPoints = 0;
+    [SerializeField] int collectablePoints = 0;
 
     [SerializeField] int enemiesDef = 0;
     [SerializeField] int collectablesFound = 0;
@@ -13,6 +17,10 @@ public class AddScore : MonoBehaviour {
     [SerializeField] int playerScore = 0;
 
     private bool gameStats = false;
+
+    public Text allPointsDisplay;
+    public Text allEnemiesDefDisplay;
+    public Text allCollectiblesDisplay;
 
     private void Awake()
     {
@@ -54,26 +62,32 @@ public class AddScore : MonoBehaviour {
 
     }
 
+    private void Update()
+    {
+        allPointsDisplay.text = "Overall Score: " + playerScore ;
+        allEnemiesDefDisplay.text = "Enemies Defeated: " + enemiesDef;
+        allCollectiblesDisplay.text = "Balloons Found: " + collectablesFound;
+    }
+
     // Players overall Score
     public void AddToScore()
     {
 
-        AddToCollectablesFound();
-        AddToEnemiesDef();
-
-        playerScore += collectablesFound + enemiesDef;
+        playerScore += collectablePoints + enemiesDefPoints;
         
     }
 
     // Adding the overall Enemy defeated points
     public void AddToEnemiesDef()
     {
-        enemiesDef += pointsperenemiesDef;
+        enemiesDef += pointsperenemiesDef /10;
+        enemiesDefPoints += pointsperenemiesDef;
     }
     // Adding the overall amount of collectables points
     public void AddToCollectablesFound()
     {
-        collectablesFound += pointpercollectable;
+        collectablesFound += pointpercollectable /5;
+        collectablePoints += pointpercollectable;
     }
 
 

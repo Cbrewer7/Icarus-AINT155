@@ -53,6 +53,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsperenemiesDef: 10
   pointpercollectable: 5
+  enemiesDefPoints: 0
+  collectablePoints: 0
   enemiesDef: 0
   collectablesFound: 0
   playerScore: 0
+  allPointsDisplay: {fileID: 114097841774495368, guid: 94c0dd554127e644dbc46550d77e3f60,
+    type: 2}
+  allEnemiesDefDisplay: {fileID: 114182972874435844, guid: 481161f1ec9f3a449bb46dd65b9c78af,
+    type: 2}
+  allCollectiblesDisplay: {fileID: 114078563171500908, guid: b272f6870c82c454c8b02b72b98ad4a7,
+    type: 2}
