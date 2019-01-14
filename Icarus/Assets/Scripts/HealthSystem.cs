@@ -42,7 +42,8 @@ public class HealthSystem : MonoBehaviour {
 
             FindObjectOfType<AddScore>().AddToScore();
 
-            health = health + 10;
+            Destroy(gameObject);
+            //health = health + 10;
         }
     }
 

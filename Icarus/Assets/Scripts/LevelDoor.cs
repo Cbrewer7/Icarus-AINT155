@@ -12,12 +12,14 @@ public class LevelDoor : MonoBehaviour {
 
     //[SerializeField] private 
 
+
+
+
     // When the player collides with this object a new level will load
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
-            
+        { 
             SceneManager.LoadScene(newLevel);
         }
     }

@@ -10,6 +10,9 @@ public class Enemy : MonoBehaviour {
     private Transform playerPos;
     private HealthSystem player;
 
+
+    public AudioClip explosionSound;
+    public AudioSource enemySound;
     //private int enemyDef;
 
     public Image healthBar;
@@ -21,7 +24,9 @@ public class Enemy : MonoBehaviour {
         // Obtaining the Player position
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
-        //enemyDef = 0;
+        
+        enemySound.clip = explosionSound;
+       
     }
 
     void Update()
@@ -42,6 +47,7 @@ public class Enemy : MonoBehaviour {
             // Destroying the Enemy object
             gameObject.SetActive(false);
             Destroy(gameObject);
+            enemySound.Play();
         }
 
         // Destroying the Enemy with the Fireable object
@@ -52,11 +58,15 @@ public class Enemy : MonoBehaviour {
             // Destroy Enemy
             gameObject.SetActive(false);
             Destroy(gameObject);
+            enemySound.Play();
 
             //enemyDef = enemyDef + 1;
 
             FindObjectOfType<AddScore>().AddToEnemiesDef();
         }
+
+       
+        
     }
 
 
