@@ -22,6 +22,8 @@ public class AddScore : MonoBehaviour {
     public Text allEnemiesDefDisplay;
     public Text allCollectiblesDisplay;
 
+    //public Text testDisplay;
+
     private void Awake()
     {
 
@@ -67,6 +69,8 @@ public class AddScore : MonoBehaviour {
         allPointsDisplay.text = "Overall Score: " + playerScore ;
         allEnemiesDefDisplay.text = "Enemies Defeated: " + enemiesDef;
         allCollectiblesDisplay.text = "Balloons Found: " + collectablesFound;
+
+        //testDisplay.text = "Kills: " + enemiesDef;
     }
 
     // Players overall Score
@@ -75,6 +79,11 @@ public class AddScore : MonoBehaviour {
 
         playerScore += collectablePoints + enemiesDefPoints;
         
+    }
+
+    public int GetScore()
+    {
+        return playerScore;
     }
 
     // Adding the overall Enemy defeated points

@@ -58,9 +58,9 @@ MonoBehaviour:
   enemiesDef: 0
   collectablesFound: 0
   playerScore: 0
-  allPointsDisplay: {fileID: 114097841774495368, guid: 94c0dd554127e644dbc46550d77e3f60,
+  allPointsDisplay: {fileID: 114011551142550494, guid: 6485d60826c02b74e80a842aa17bdf9c,
     type: 2}
-  allEnemiesDefDisplay: {fileID: 114182972874435844, guid: 481161f1ec9f3a449bb46dd65b9c78af,
+  allEnemiesDefDisplay: {fileID: 114623151337864342, guid: 6485d60826c02b74e80a842aa17bdf9c,
     type: 2}
-  allCollectiblesDisplay: {fileID: 114078563171500908, guid: b272f6870c82c454c8b02b72b98ad4a7,
+  allCollectiblesDisplay: {fileID: 114737296454379730, guid: 6485d60826c02b74e80a842aa17bdf9c,
     type: 2}
