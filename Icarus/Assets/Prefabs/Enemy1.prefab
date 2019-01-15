@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 0.1
+  speed: 1
   explosionSound: {fileID: 8300000, guid: 692b98eda7ce28749b1efdab659cba2f, type: 3}
   enemySound: {fileID: 82639281318191300}
   healthBar: {fileID: 0}

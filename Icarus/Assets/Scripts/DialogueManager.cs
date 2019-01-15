@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
+    // UI components for tutorial
     public GameObject dialogueBox;
     public GameObject controlsScroll;
     public Text dialogueText;
+    public GameObject hint;
 
     public bool dialogueActive;
 	// Use this for initialization
@@ -17,10 +19,14 @@ public class DialogueManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        // If the Dialogue Box is active and the player presses space
         if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
+            // Set the UI Components to false
             controlsScroll.SetActive(false);
             dialogueBox.SetActive(false);
+            hint.SetActive(false);
             dialogueActive = false;
         }
 	}

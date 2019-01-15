@@ -39,6 +39,23 @@ GameObject:
   - component: {fileID: 222915633340584140}
   - component: {fileID: 114244273014973962}
   m_Layer: 5
+  m_Name: Hint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1222571890744776
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224217042281648404}
+  - component: {fileID: 222703662177833666}
+  - component: {fileID: 114573613325873382}
+  m_Layer: 5
   m_Name: CloseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,6 +153,39 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1194581302065282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Hint (Cannon balls are less effective when you shoot   close range)
+--- !u!114 &114573613325873382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1222571890744776}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -334,9 +384,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cap'n, it appears we're in dangerous air now, we should be wise and stay
-    on our guard, by hope and lady luck we'll get out of this mountainous, bandit
-    ridden hell, I suggest we head for those narrow passes to find a way out.
+  m_Text: Cap'n, I hate to be the barer of ill news but we've been swept into the
+    most dangerous airs known to man, ridden with bandits and terrible storms that'll
+    surely rip us apart. Might I suggest we try those narrow passage ways to perhaps
+    find a way out?... Also those balloons look pretty...
 --- !u!222 &222145034817190808
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -355,6 +406,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959824748248822}
+--- !u!222 &222703662177833666
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1222571890744776}
 --- !u!222 &222915633340584140
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -387,6 +444,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!224 &224217042281648404
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1222571890744776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224720535799371812}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 120.1, y: -56.8}
+  m_SizeDelta: {x: 216.9, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224230507995632354
 RectTransform:
   m_ObjectHideFlags: 1
@@ -430,17 +505,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1194581302065282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224720535799371812}
-  m_RootOrder: 1
+  m_Father: {fileID: 224761763522340914}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 126.60002, y: -53.05}
-  m_SizeDelta: {x: 216.9, y: 30}
+  m_AnchoredPosition: {x: 76.3, y: -37.3}
+  m_SizeDelta: {x: 209.74, y: 43.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224720535799371812
 RectTransform:
@@ -453,15 +528,15 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224359389317412078}
-  - {fileID: 224490597147425944}
+  - {fileID: 224217042281648404}
   - {fileID: 224750616506912550}
   m_Father: {fileID: 224761763522340914}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.8, y: -188}
-  m_SizeDelta: {x: 638.8, y: 138.6}
+  m_AnchoredPosition: {x: 2.8, y: -183.8}
+  m_SizeDelta: {x: 638.8, y: 147.01}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!224 &224750616506912550
 RectTransform:
@@ -493,6 +568,7 @@ RectTransform:
   m_Children:
   - {fileID: 224720535799371812}
   - {fileID: 224779068877623552}
+  - {fileID: 224490597147425944}
   m_Father: {fileID: 224230507995632354}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

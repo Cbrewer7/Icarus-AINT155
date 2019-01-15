@@ -52,7 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23855f2cd533afd4a9e3371f58f4e799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 10
+  amountofspawns: 5
+  time: 4
   repeat: 1
   onTimerComplete:
     m_PersistentCalls:
