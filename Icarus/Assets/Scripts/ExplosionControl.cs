@@ -16,7 +16,18 @@ public class ExplosionControl : MonoBehaviour {
     {
         Explosion.GetComponent<ParticleSystem>().enableEmission = true;
         Explosion.GetComponent<ParticleSystem>().Play();
-        StartCoroutine(StopExplosion());
+
+        //if (Explosion.GetComponent<ParticleSystem>().enableEmission = true)
+        //{
+        //    Debug.Log("Explosion has gone off" + );
+        //    StartCoroutine(StopExplosion());
+        //    Debug.Log("Explosion has stopped");
+        //    Destroy(gameObject);
+        //}
+        
+        //StartCoroutine(StopExplosion());
+
+
     }
 
     IEnumerator StopExplosion()

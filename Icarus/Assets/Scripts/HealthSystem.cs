@@ -16,6 +16,7 @@ public class HealthSystem : MonoBehaviour {
 
     public Slider healthSlider;
 
+    public GameObject theCamera;
     //public OnDamagedEvent onDamaged;
 
     private void Update()
@@ -42,6 +43,8 @@ public class HealthSystem : MonoBehaviour {
 
             FindObjectOfType<AddScore>().AddToScore();
 
+            theCamera = GameObject.FindGameObjectWithTag("MainCamera");
+            Object.Destroy(theCamera);
             Destroy(gameObject);
             //health = health + 10;
         }

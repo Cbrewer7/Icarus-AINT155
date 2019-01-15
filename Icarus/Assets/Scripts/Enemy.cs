@@ -32,8 +32,13 @@ public class Enemy : MonoBehaviour {
     void Update()
     {
         // The Enemy automatically moving towards the Player
-        transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
-        
+        if (transform.position != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+        } else
+        {
+            
+        }
         
     }
 
@@ -60,8 +65,8 @@ public class Enemy : MonoBehaviour {
             Destroy(gameObject);
             enemySound.Play();
 
-            //enemyDef = enemyDef + 1;
-
+           
+            // Adding score to the enemies defeated stat
             FindObjectOfType<AddScore>().AddToEnemiesDef();
         }
 
