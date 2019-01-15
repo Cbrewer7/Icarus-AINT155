@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour {
     private Transform playerPos;
     private HealthSystem player;
 
+    
 
     public AudioClip explosionSound;
     public AudioSource enemySound;
@@ -37,9 +38,10 @@ public class Enemy : MonoBehaviour {
             transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
         } else
         {
+            Destroy(gameObject);
             
         }
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,7 +53,7 @@ public class Enemy : MonoBehaviour {
 
             // Destroying the Enemy object
             gameObject.SetActive(false);
-            Destroy(gameObject);
+            // Destroy(gameObject);
             enemySound.Play();
         }
 
@@ -62,7 +64,7 @@ public class Enemy : MonoBehaviour {
             Destroy(other.gameObject);
             // Destroy Enemy
             gameObject.SetActive(false);
-            Destroy(gameObject);
+            //Destroy(gameObject);
             enemySound.Play();
 
            
