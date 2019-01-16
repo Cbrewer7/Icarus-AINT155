@@ -19,7 +19,10 @@ public class LevelDoor : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        { 
+        {
+            //Places the player back at it's origninal starting position
+            FindObjectOfType<Playersystem>().SetStartPosition();
+            //Loads the next level
             SceneManager.LoadScene(newLevel);
         }
     }

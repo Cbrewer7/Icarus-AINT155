@@ -16,9 +16,15 @@ public class Playersystem : MonoBehaviour {
     //public Text HealthDisplay;
     //private int pickupCount;
 
+    public Vector2 startPosition;
+
     private static bool playerExists;
 
-    
+    // Is called on to reset the players starting position
+    public void SetStartPosition()
+    {
+        transform.position = startPosition;
+    }
 
     // Use this for initialization
     void Start() {
@@ -38,6 +44,7 @@ public class Playersystem : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        startPosition = transform.position;
         //pickupCount = 0;
     }
 

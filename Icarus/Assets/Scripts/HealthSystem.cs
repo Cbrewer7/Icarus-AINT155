@@ -43,10 +43,7 @@ public class HealthSystem : MonoBehaviour {
 
             FindObjectOfType<AddScore>().AddToScore();
 
-            theCamera = GameObject.FindGameObjectWithTag("MainCamera");
-            Object.Destroy(theCamera);
-            Destroy(gameObject);
-            //health = health + 10;
+            health = health + 10;
         }
     }
 

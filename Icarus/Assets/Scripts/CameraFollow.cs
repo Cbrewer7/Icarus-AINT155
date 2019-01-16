@@ -25,7 +25,9 @@ public class CameraFollow : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        
+
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     // Use this for initialization
