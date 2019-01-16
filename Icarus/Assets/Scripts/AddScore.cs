@@ -5,30 +5,35 @@ using UnityEngine.UI;
 
 public class AddScore : MonoBehaviour {
 
+    // The points that add up to make the players overall score
     [SerializeField] int pointsperenemiesDef = 10;
     [SerializeField] int pointpercollectable = 5;
 
+    // The amount of points acumulated by the player during the current runthrough of both variables
     [SerializeField] int enemiesDefPoints = 0;
     [SerializeField] int collectablePoints = 0;
 
+    // The amount of Enemies killed and balloons collected
     [SerializeField] int enemiesDef = 0;
     [SerializeField] int collectablesFound = 0;
 
+    // The Players overall score
     [SerializeField] int playerScore = 0;
 
     private bool gameStats = false;
 
+    // The Text properties where the stats are displayed
     public Text allPointsDisplay;
     public Text allEnemiesDefDisplay;
     public Text allCollectiblesDisplay;
 
-    //public Text testDisplay;
-
     private void Awake()
     {
 
-        //Finding how many of the game object containing this script there are
+        // Finding how many of the game object containing this script there are
         int addScoreCount = FindObjectsOfType<AddScore>().Length;
+        // If there are more than one copy delete the current copy and use the newest
+        // This is used to reset the score
         if (addScoreCount > 1)
         {
             gameObject.SetActive(false);
@@ -41,36 +46,19 @@ public class AddScore : MonoBehaviour {
 
     }
 
+    // Destroys the current game object
     public void DestroySelf()
     {
         Destroy(gameObject);
     }
-
-    private void Start()
-    {
-
-        // Not destroying the object keeping score
-        //if (!gameStats)
-        //{
-        //gameStats = true;
-        //// The object will remain the same when changing scenes
-        //DontDestroyOnLoad(transform.gameObject);
-        //}
-        //else
-        //{
-        //// Destroys the copy of the object that appears when a new scene is loaded
-        //Destroy(gameObject);
-        //}
-
-    }
+    
 
     private void Update()
     {
+        // Display the correct stats in a good looking format
         allPointsDisplay.text = "Overall Score: " + playerScore ;
         allEnemiesDefDisplay.text = "Enemies Defeated: " + enemiesDef;
         allCollectiblesDisplay.text = "Balloons Found: " + collectablesFound;
-
-        //testDisplay.text = "Kills: " + enemiesDef;
     }
 
     // Players overall Score
@@ -80,12 +68,7 @@ public class AddScore : MonoBehaviour {
         playerScore += collectablePoints + enemiesDefPoints;
         
     }
-
-    public int GetScore()
-    {
-        return playerScore;
-    }
-
+    
     // Adding the overall Enemy defeated points
     public void AddToEnemiesDef()
     {
@@ -98,24 +81,5 @@ public class AddScore : MonoBehaviour {
         collectablesFound += pointpercollectable /5;
         collectablePoints += pointpercollectable;
     }
-
-
-
-    //public delegate void SendScore(int theScore);
-    //public static event SendScore OnSendScore;
-
-    //public int score = 0;
-    //public bool scoreSent = false;
-
-    //private void OnDestroy()
-    //{
-    //    if(OnSendScore != null)
-    //    {
-    //        if(!scoreSent)
-    //        {
-    //            scoreSent = true;
-    //            OnSendScore(score);
-    //        }
-    //    }
-    //}
+    
 }

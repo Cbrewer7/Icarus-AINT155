@@ -17,20 +17,13 @@ public class BalloonCollectable : MonoBehaviour {
         // Assigns audio clip to source object to be handled
         balloonCollected = GetComponent<AudioSource>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Where the player comes into content 
+        // Where the player comes into contact
         if (other.CompareTag("Player"))
         {
-
-            //gameObject.SetActive(false);
-
+            
             FindObjectOfType<AddScore>().AddToCollectablesFound();
 
 

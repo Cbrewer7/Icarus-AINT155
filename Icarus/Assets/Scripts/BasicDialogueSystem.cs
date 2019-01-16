@@ -6,15 +6,14 @@ public class BasicDialogueSystem : MonoBehaviour {
 
     public GameObject dialogueBox;
 
-
+    // Whether or not the dialog box is active in the scene
     public bool dialogueActive;
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        // When the dialogue box is active and the space key is pressed,
+        // deactivate the dialogue box
         if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
             dialogueBox.SetActive(false);

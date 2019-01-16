@@ -18,9 +18,12 @@ public class PlayerShooting : MonoBehaviour {
 
     void Update()
     {
+        // When the player clicks the mouse the shot is started and goes to 
+        // the direction of the mouse click from the players position.
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(shot, PlayerPos.position, Quaternion.identity);
+            // Adding a sound effect
             Playerfiring.Play();
         }    
     }

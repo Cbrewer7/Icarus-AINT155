@@ -16,44 +16,12 @@ public class ExplosionControl : MonoBehaviour {
     {
         Explosion.GetComponent<ParticleSystem>().enableEmission = true;
         Explosion.GetComponent<ParticleSystem>().Play();
-
-        //if (Explosion.GetComponent<ParticleSystem>().enableEmission = true)
-        //{
-        //    Debug.Log("Explosion has gone off" + );
-        //    StartCoroutine(StopExplosion());
-        //    Debug.Log("Explosion has stopped");
-        //    Destroy(gameObject);
-        //}
-        
-        //StartCoroutine(StopExplosion());
-
-
     }
 
     IEnumerator StopExplosion()
     {
         yield return new WaitForSeconds(.1f);
         Explosion.GetComponent<ParticleSystem>().enableEmission = false;
-        //.enableEmission
+        
     }
-    //private void Update()
-    //{
-    //    var emission = Explosion.emission;
-    //    emission.enabled = moduleEnabled;
-    //}
-
-    //private void Start()
-    //{
-    //    ParticleSystem Explosion = GetComponent<ParticleSystem>();
-    //    var em = Explosion.emission;
-    //    em.enabled = true;
-
-    //    em.type = ParticleSystemEmissionType.Time;
-
-    //    em.SetBurst(
-    //        new ParticleSystem.Burst[] {
-    //        new ParticleSystem.Burst(2.0f, 100),
-    //        new ParticleSystem.Burst(4.0f, 100)
-    //        });
-    //}
 }

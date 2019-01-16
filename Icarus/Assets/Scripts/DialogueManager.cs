@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
+    // This is the same as the basic Dialogue system but includes more variables for the tutorial
 
     // UI components for tutorial
     public GameObject dialogueBox;

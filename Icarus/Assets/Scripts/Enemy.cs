@@ -9,9 +9,7 @@ public class Enemy : MonoBehaviour {
     public float speed;
     private Transform playerPos;
     private HealthSystem player;
-
     
-
     public AudioClip explosionSound;
     public AudioSource enemySound;
     //private int enemyDef;
@@ -25,9 +23,7 @@ public class Enemy : MonoBehaviour {
         // Obtaining the Player position
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
-        
         enemySound.clip = explosionSound;
-       
     }
 
     void Update()
@@ -39,9 +35,7 @@ public class Enemy : MonoBehaviour {
         } else
         {
             Destroy(gameObject);
-            
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -70,15 +64,18 @@ public class Enemy : MonoBehaviour {
            
             // Adding score to the enemies defeated stat
             FindObjectOfType<AddScore>().AddToEnemiesDef();
-        }
 
-       
-        
+
+            
+        }
     }
 
-
+    // Used to initiate the explosion after enemy death
     private void OnDisable()
     {
         GetComponent<Spawner>().Spawn();
+
     }
+   
 }
+

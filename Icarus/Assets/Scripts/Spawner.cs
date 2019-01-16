@@ -10,6 +10,8 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
+        transform.position = gameObject.transform.position;
+
         Vector3 rotationinDegrees = transform.eulerAngles;
         rotationinDegrees.z += adjustmentAngle;
 

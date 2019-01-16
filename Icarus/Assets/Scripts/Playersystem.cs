@@ -8,14 +8,12 @@ public class Playersystem : MonoBehaviour {
 
     // used to apply multiple animations
     public Animator anim;
+
     // Contorlling the speed of player
     public float Speed = 3;
     private Vector2 moveVelocity;
     private Rigidbody2D rb;
-    //public Image healthBar;
-    //public Text HealthDisplay;
-    //private int pickupCount;
-
+    
     public Vector2 startPosition;
 
     private static bool playerExists;
@@ -45,37 +43,21 @@ public class Playersystem : MonoBehaviour {
         }
 
         startPosition = transform.position;
-        //pickupCount = 0;
     }
 
     // Update is called once per frame
     void Update() {
-       
-
 
         // Player movement
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         moveVelocity = moveInput.normalized * Speed;
-
-        // Change the below to When the player Dies Display the stats
-
-        // If the Player Health reaches 0 or less then the level restarts (THIS IS TEMPORARY) 
-        //if(health <= 0)
-        //{
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        // }
-
-
-
-
+        
         // Used to assign animation
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
 
         anim.SetFloat("SpeedX", inputX);
         anim.SetFloat("SpeedY", inputY);
-
-
     }
 
     private void FixedUpdate()
@@ -118,14 +100,4 @@ public class Playersystem : MonoBehaviour {
             anim.SetBool("Moving", false);
         }
     }
-
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Pickup"))
-    //    {
-    //        other.gameObject.SetActive(false);
-    //        pickupCount = pickupCount + 1;
-            
-    //    }
-    //}
 }
