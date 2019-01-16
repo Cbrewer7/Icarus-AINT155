@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour {
         if (other.CompareTag("Fireable"))
         {
             // Destroy Projectile
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             // Destroy Enemy
             gameObject.SetActive(false);
             //Destroy(gameObject);
