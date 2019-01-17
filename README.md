@@ -17,7 +17,7 @@ Assignment title:
 Unity 2D top down game
 
 References:
-All visual assets have been self made, all audio assets have been acquired through https://freesound.org/
+All visual assets have been self made, all audio assets have been acquired through https://freesound.org/ and all links to them can be found in my GDD.
 All scripts have been made by myself but with influence from in uni lab sessions, Unity forums, and a Udemy course.
 
 Ben Tristem, Rick Davidson. (2017). Complete C# Unity Developer 2D: Learn to Code Making Games. Available: https://www.udemy.com/unitycourse/. Last accessed 17th Jan 2019.
